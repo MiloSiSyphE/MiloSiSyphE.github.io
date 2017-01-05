@@ -16,6 +16,7 @@ categories: 编程麻瓜
 permission denied
 
 一般来说我们不是root账户安装Shadosocks(此处若有误，请大神们斧正。)，因此下意识的会运行sudo命令：
+
 > $ sudo ssserver -c /etc/shadowsocks/config.json -d start
 sudo: ssserver: command not found
 
@@ -24,10 +25,12 @@ sudo: ssserver: command not found
 但一般不推荐直接把命令直接添加进`~/.profile`，具体讨论见此[How to correctly add a path to PATH?](http://unix.stackexchange.com/questions/26047/how-to-correctly-add-a-path-to-path?answertab=active#tab-top)
 
 不过有一个偷懒的方法，运行:
+
 > $ which ssserver
 /usr/local/bin
 
 因此`ssserver`在`~/usr/local/bin`目录下，所以运行：
+
 > $ sudo /usr/local/bin/ssserver -c /etc/shadowsocks/config.json -d start
 
 这样就可以了。
