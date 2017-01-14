@@ -24,7 +24,7 @@ twitter_username: miluoZ
 
 # Build settings
 markdown: kramdown
-theme: minimal
+theme: minima
 gems:
   - jekyll-feed
 exclude:
